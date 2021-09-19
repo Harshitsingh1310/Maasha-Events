@@ -1,0 +1,307 @@
+/* --------------------- Scroll-to-top Style Start --------------------- */
+.scroll-top {
+  position: fixed;
+  bottom: 800px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  font-size: 2.2rem;
+  background: var(--main-color);
+  border-radius: 50%;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 8px var(--black);
+  z-index: 1000;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 40px;
+}
+
+@media only screen and (max-width: 598px) {
+  .scroll-top {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+  }
+}
+/* ----------x---------- Scroll-to-top Style End ----------x---------- */
+
+/* --------------------- Preloader Style Start --------------------- */
+.loader-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  background: #111;
+  animation: changeColor 10s linear infinite;
+  z-index: 10000;
+}
+
+.loader-wrapper .loader {
+  position: relative;
+}
+
+.loader-wrapper h2 {
+  color: var(--main-color);
+  font-weight: 500;
+  letter-spacing: 10px;
+}
+
+.loader-wrapper .loader .dot {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: var(--main-color);
+  box-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color),
+    0 0 40px var(--main-color), 0 0 60px var(--main-color),
+    0 0 80px var(--main-color), 0 0 100px var(--main-color);
+  margin: 2rem 1rem;
+  transform: scale(0.1);
+  border-radius: 50%;
+  animation: animateDot 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.loader-wrapper .loader:last-child .dot {
+  animation-delay: calc(-0.1s * var(--i));
+}
+
+@keyframes animateDot {
+  0% {
+    transform: scale(0.1);
+  }
+  10% {
+    transform: scale(1);
+  }
+  50%,
+  100% {
+    transform: scale(0.1);
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+/* ----------x---------- Preloader Style End ----------x---------- */
+
+/* --------------------- Color Switcher Start --------------------- */
+.style-switcher {
+  position: fixed;
+  right: 0;
+  background: var(--white);
+  max-width: 200px;
+  width: 100%;
+  padding: 1.5rem;
+  top: 100px;
+  z-index: 1500;
+  box-shadow: 0 0 6px #cccccc;
+  transition: all 0.3s ease;
+  transform: translateX(100%);
+}
+
+.style-switcher.open {
+  transform: translateX(0px);
+}
+
+.style-switcher .s-icon {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  color: var(--white);
+  background: var(--main-color);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 40px;
+  right: 100%;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px var(--black);
+}
+
+.style-switcher .style-toggler {
+  top: 0;
+}
+
+.style-switcher .day-night {
+  top: 55px;
+}
+
+.style-switcher h4 {
+  margin: 0 0 1rem;
+  color: #555555;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 0.5rem;
+}
+
+.style-switcher .colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.style-switcher .colors span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.style-switcher .color-1 {
+  background-color: #fb839e;
+}
+
+.style-switcher .color-2 {
+  background-color: #3e99f5;
+}
+
+.style-switcher .color-3 {
+  background-color: #0dcdbd;
+}
+
+.style-switcher .color-4 {
+  background-color: #cc3b3b;
+}
+
+.style-switcher .color-5 {
+  background-color: #ff9801;
+}
+
+@media only screen and (max-width: 996px) {
+  .style-switcher .s-icon {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    margin-right: 1rem;
+  }
+
+  .style-switcher .day-night {
+    top: 50px;
+  }
+}
+/* ----------x---------- Color Switcher End ----------x---------- */
+
+/* --------------------- Dark Theme Style Start --------------------- */
+body.dark,
+body.dark .style-switcher,
+body.dark .desti-item i,
+body.dark .section-heading h1::after {
+  background: var(--black);
+}
+
+body.dark .header.fixed nav,
+body.dark .services .service-wrapper .service-card,
+body.dark .testimonial .testi-content,
+body.dark .team-wrapper .team-card,
+body.dark .contact-us .contact-form,
+body.dark .form .input-data input,
+body.dark .form .textarea textarea {
+  background: #222;
+}
+
+body.dark .form .inner input {
+  background: var(--white);
+  color: var(--black) !important;
+}
+
+body.dark .style-switcher i,
+body.dark .services .section-heading h1,
+body.dark .testimonial .section-heading h1,
+body.dark .contact-us .section-heading h1 {
+  color: var(--black);
+}
+
+body.dark .form .inner input:hover {
+  background: var(--main-color);
+  color: var(--white) !important;
+}
+
+body.dark .style-switcher h4,
+body.dark .header.fixed .nav-brand span,
+body.dark .header.fixed .nav-items .nav-links,
+body.dark .about .about-title h3,
+body.dark .about .about-title h2,
+body.dark .about .about-item p,
+body.dark .desti-text span,
+body.dark .desti-text p,
+body.dark .services .service-wrapper .service-card h2,
+body.dark .form .input-data label,
+body.dark .form .textarea textarea,
+body.dark .form .input-data input,
+body.dark .section-heading p {
+  color: var(--white);
+}
+
+body.dark .services .service-wrapper .service-card p,
+body.dark .client-comment blockquote,
+body.dark .team-wrapper .team-info .info-bx h4 {
+  color: #bbbbbb;
+}
+
+body.dark .header .nav-items .nav-links:hover,
+body.dark .header .nav-list.active .nav-links,
+body.dark .header.fixed .nav-items .nav-links:hover,
+body.dark .services .service-wrapper .service-card:hover h2,
+body.dark .form .input-data input:focus ~ label,
+body.dark .form .textarea textarea:focus ~ label,
+body.dark .form .input-data input:valid ~ label,
+body.dark .form .textarea textarea:valid ~ label {
+  color: var(--main-color);
+}
+
+body.dark .header.fixed .navbar-toggler,
+body.dark .services .service-wrapper .service-content,
+body.dark .form .input-data input,
+body.dark .form .textarea textarea {
+  border-color: var(--white);
+}
+
+body.dark .about .section-heading h1::after,
+body.dark .destinations .section-heading h1::after,
+body.dark .gallery .section-heading h1::after,
+body.dark .our-team .section-heading h1::after {
+  background: var(--main-color);
+}
+
+body.dark .testimonial .testi-content {
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .team-wrapper .team-card {
+  box-shadow: 1px 1px 10px var(--white), -6px -6px 10px var(--black);
+}
+
+body.dark .team-wrapper .team-card:hover {
+  box-shadow: 1px 1px 10px var(--main-color), -6px -6px 10px var(--main-color);
+}
+
+@media only screen and (max-width: 850px) {
+  body.dark .header .nav-menu {
+    background: #222;
+  }
+
+  body.dark .header .nav-items .nav-links {
+    color: var(--white);
+  }
+
+  body.dark .header .nav-items .nav-list:hover .nav-links {
+    color: var(--white);
+  }
+}
+/* ----------x---------- Dark Theme Style End ----------x---------- */

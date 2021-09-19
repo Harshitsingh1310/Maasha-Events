@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <!-- Glidejs StyleSheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css" />
+
+    <!-- Animate CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/setting.css" />
+
+    <!-- Style Switcher -->
+    <link rel="stylesheet" class="alternate-style" title="color-1" href="./CSS/skins/pink.css" disabled />
+    <link rel="stylesheet" class="alternate-style" title="color-2" href="./CSS/skins/blue.css" disabled />
+    <link rel="stylesheet" class="alternate-style" title="color-3" href="./CSS/skins/light-green.css" disabled />
+    <link rel="stylesheet" class="alternate-style" title="color-4" href="./CSS/skins/red.css" disabled />
+    <link rel="stylesheet" class="alternate-style" title="color-5" href="./CSS/skins/yellow.css" disabled />
+    <title>Maasha Events</title>
+
+</head>
+
+<body>
+    <!-- ------------------------- Additional Code Start ------------------------- -->
+    <!-- Preloader -->
+    <div class="loader-wrapper center">
+        <div class="loader flex">
+            <div class="dot" style="--i:0;"></div>
+            <div class="dot" style="--i:1;"></div>
+            <div class="dot" style="--i:2;"></div>
+            <div class="dot" style="--i:3;"></div>
+            <div class="dot" style="--i:4;"></div>
+            <div class="dot" style="--i:5;"></div>
+            <div class="dot" style="--i:6;"></div>
+            <div class="dot" style="--i:7;"></div>
+            <div class="dot" style="--i:8;"></div>
+            <div class="dot" style="--i:9;"></div>
+        </div>
+        <h2>LOADING...</h2>
+        <div class="loader flex">
+            <div class="dot" style="--i:0;"></div>
+            <div class="dot" style="--i:1;"></div>
+            <div class="dot" style="--i:2;"></div>
+            <div class="dot" style="--i:3;"></div>
+            <div class="dot" style="--i:4;"></div>
+            <div class="dot" style="--i:5;"></div>
+            <div class="dot" style="--i:6;"></div>
+            <div class="dot" style="--i:7;"></div>
+            <div class="dot" style="--i:8;"></div>
+            <div class="dot" style="--i:9;"></div>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" onclick="scrollToTop();"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Theme setting start -->
+    <div class="style-switcher" id="style-switcher">
+        <div class="style-toggler s-icon" id="style-toggler">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- ------------x------------ Additional Code End ------------x------------ -->
+
+    <!-- ------------------------- Header Section Start ------------------------- -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="row">
+                    <div class="nav-brand">
+                        <a href="#">
+                            <!-- <img src="./images/Logo.png" alt=""> -->
+                            <h1>Maasha <span>Events</span></h1>
+                        </a>
+                    </div>
+
+                    <div class="navbar-toggler" id="navbar-toggler">
+                        <div class="bar"></div>
+                    </div>
+
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-items flex align-center">
+                            <li class="nav-list home-section">
+                                <a href="#home-section" class="nav-links">Home</a>
+                            </li>
+                            <li class="nav-list about-us-section">
+                                <a href="#about-us-section" class="nav-links">About Us</a>
+                            </li>
+                            <li class="nav-list services-section">
+                                <a href="#services-section" class="nav-links">Services</a>
+                            </li>
+                            <li class="nav-list destinations-section">
+                                <a href="#destinations-section" class="nav-links">Destinations</a>
+                            </li>
+                            <li class="nav-list gallery-section">
+                                <a href="#gallery-section" class="nav-links">Gallery</a>
+                            </li>
+                            <li class="nav-list testimonial-section">
+                                <a href="#testimonial-section" class="nav-links">Testimonials</a>
+                            </li>
+                            <li class="nav-list contact-section">
+                                <a href="#contact-section" class="nav-links">Contact US</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ------------x------------ Header Section End ------------x------------ -->
+
+    <!-- ------------------------- Main Section Start ------------------------- -->
+    <main>
+
+        <!-- ----------------- Home Section Start ----------------- -->
+        <section class="home" id="home-section">
+            <div class="glide" id="glide1">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <!-- ----- slide 1 ----- -->
+                        <li class="glide__slide" style="background-image: url(./images/hero/bg2.jpg);">
+                            <div class="container">
+                                <div class="home-wrapper center">
+                                    <p data-aos="fade-down" data-aos-duration="1000">Welcome To</p>
+                                    <h1 data-aos="fade-up" data-aos-duration="1500">Maasha Events</h1>
+                                    <!-- <img src="./images/Logo.png" alt=""> -->
+                                    <span data-aos="fade-right" data-aos-duration="2000">"Adding on extra festivals to
+                                        your calendar"</span>
+                                    <div class="home-btn" data-aos="fade-left" data-aos-duration="2500">
+                                        <a href="#about-us-section" class="btn">Explore</a>
+                                        <a href="#contact-section" class="btn">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- ----- slide 2 ----- -->
+                        <li class="glide__slide" style="background-image: url(./images/hero/bg3.jpg);">
+                            <div class="container">
+                                <div class="home-wrapper center">
+                                    <p data-aos="fade-down" data-aos-duration="1000">Welcome To</p>
+                                    <h1 data-aos="fade-up" data-aos-duration="1500">Maasha Events</h1>
+                                    <span data-aos="fade-right" data-aos-duration="2000">"Adding on extra festivals to
+                                        your calendar"</span>
+                                    <div class="home-btn" data-aos="fade-left" data-aos-duration="2500">
+                                        <a href="#about-us-section" class="btn">Explore</a>
+                                        <a href="#contact-section" class="btn">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- ----- slide 3 ----- -->
+                        <li class="glide__slide" style="background-image: url(./images/hero/bg6.jpg);">
+                            <div class="container">
+                                <div class="home-wrapper center">
+                                    <p data-aos="fade-down" data-aos-duration="1000">Welcome To</p>
+                                    <h1 data-aos="fade-up" data-aos-duration="1500">Maasha Events</h1>
+                                    <span data-aos="fade-right" data-aos-duration="2000">"Adding on extra festivals to
+                                        your calendar"</span>
+                                    <div class="home-btn" data-aos="fade-left" data-aos-duration="2500">
+                                        <a href="#about-us-section" class="btn">Explore</a>
+                                        <a href="#contact-section" class="btn">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ----- arrows ----- -->
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left prev-btn" data-glide-dir="<"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <button class="glide__arrow glide__arrow--right next-btn" data-glide-dir=">"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+        <!-- --------x-------- Home Section End --------x-------- -->
+
+        <!-- ----------------- About Section Start ----------------- -->
+        <section class="about" id="about-us-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h1 data-aos="fade-right" data-aos-duration="1000">Our-Story</h1>
+                    <p data-aos="fade-left" data-aos-duration="1500">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Molestiae, voluptate?</p>
+                </div>
+                <div class="about-wrapper flex">
+                    <div class="about-img" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="./images/about2.jpg" alt="">
+                    </div>
+                    <div class="about-content">
+                        <div class="about-title">
+                            <h3 data-aos="fade-down" data-aos-duration="1000">Maasha Events</h3>
+                            <h2 data-aos="fade-down" data-aos-duration="1500">Recreating Your <span>Dreams</span></h2>
+                        </div>
+                        <div class="about-item" data-aos="fade-down" data-aos-duration="2000">
+                            <p>Hailing from Noida, <strong class="main-color">MAASHA</strong> Events is a dream
+                                house that aspires to weave the emotions of others into reality. This event management
+                                firm acknowledge the various shades of our culture which are reflected in our gathering
+                                and functions. <strong class="main-color">MAASHA</strong> resembles beauty and our
+                                team is dedicated to bring this beauty in our projects. We at <strong
+                                    class="main-color">MAASHA</strong> Will work for you and with you to help you
+                                plan your special day. Be it <span style="font-style: italic;"> birthday, date nights,
+                                    proposals, festival, or wedding
+                                    functions </span> <strong class="main-color">MAASHA</strong> Will Sort
+                                Everything</p>
+                            <br>
+                            <p>We landed in the domain in 2020 with a simple promise to make your occasions a big
+                                success. The trained, creative team here possesses the expertise which can help you
+                                organize your events like a pro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------x-------- About Section End --------x-------- -->
+
+        <!-- ----------------- Services Section Start ----------------- -->
+        <section class="services row" id="services-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h1 data-aos="fade-left" data-aos-duration="1000">Services</h1>
+                    <p data-aos="fade-right" data-aos-duration="1500">Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Molestiae, voluptate?</p>
+                </div>
+                <div class="service-wrapper flex justify-around align-center">
+                    <!-- ----- card-1 ----- -->
+                    <div class="service-card center" data-aos="zoom-in-down" data-aos-duration="1000">
+                        <div class="service-content">
+                            <div class="bar"></div>
+                            <img src="./images/services/wedding-arch.png" alt="">
+                            <h2>Decor & Catering Management</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aut consectetur earum
+                                mollitia non magni aliquam nam impedit, inventore aspernatur?</p>
+                        </div>
+                    </div>
+
+                    <!-- ----- card-2 ----- -->
+                    <div class="service-card center" data-aos="zoom-in-up" data-aos-duration="1000">
+                        <div class="service-content">
+                            <div class="bar"></div>
+                            <img src="./images/services/006-hospitality.png" alt="">
+                            <h2>Hospitality & Guest Management</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aut consectetur earum
+                                mollitia non magni aliquam nam impedit, inventore aspernatur?</p>
+                        </div>
+                    </div>
+
+                    <!-- ----- card-3 ----- -->
+                    <div class="service-card center" data-aos="zoom-in-down" data-aos-duration="1000">
+                        <div class="service-content">
+                            <div class="bar"></div>
+                            <img src="./images/services/005-wedding-invitation.png" alt="">
+                            <h2>Guest Invitation, Gifting & Stationery</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aut consectetur earum
+                                mollitia non magni aliquam nam impedit, inventore aspernatur?</p>
+                        </div>
+                    </div>
+
+                    <!-- ----- card-4 ----- -->
+                    <div class="service-card center" data-aos="zoom-in-up" data-aos-duration="1000">
+                        <div class="service-content">
+                            <div class="bar"></div>
+                            <img src="./images/services/003-steering-wheel.png" alt="">
+                            <h2>Logistics</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aut consectetur earum
+                                mollitia non magni aliquam nam impedit, inventore aspernatur?</p>
+                        </div>
+                    </div>
+
+                    <!-- ----- card-5 ----- -->
+                    <div class="service-card center" data-aos="zoom-in-down" data-aos-duration="1000">
+                        <div class="service-content">
+                            <div class="bar"></div>
+                            <img src="./images/services/001-drum.png" alt="">
+                            <h2>Entertaiment</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aut consectetur earum
+                                mollitia non magni aliquam nam impedit, inventore aspernatur?</p>
+                        </div>
+                    </div>
+
+                    <!-- ----- card-6 ----- -->
+                    <div class="service-card center" data-aos="zoom-in-up" data-aos-duration="1000">
+                        <div class="service-content">
+                            <div class="bar"></div>
+                            <img src="./images/services/location.png" alt="">
+                            <h2>Venue Selection</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aut consectetur earum
+                                mollitia non magni aliquam nam impedit, inventore aspernatur?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------x-------- Services Section End --------x-------- -->
+
+        <!-- ----------------- Destination Section Start ----------------- -->
+        <section class="destinations" id="destinations-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h1 data-aos="fade-down" data-aos-duration="1000">Destinations</h1>
+                    <p data-aos="fade-up" data-aos-duration="1500">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Quasi, quaerat.</p>
+                </div>
+                <div class="desti-wrapper">
+                    <div class="desti-content">
+                        <!-- ----- destination-1 ----- -->
+                        <div class="desti-item flex">
+                            <i class="fas fa-heart"></i>
+                            <div class="desti-text" data-aos="fade-right" data-aos-duration="1000">
+                                <h3>JAIPUR</h3>
+                                <span>The Pink City</span>
+                                <p>With its age-old palaces, magnificent forts and grand mansions, Jaipur seems
+                                    absolutely perfect for the most awaited
+                                    wedding celebrations. It gives you a chance to get married like kings and queens at
+                                    top-notch venues that aren’t
+                                    anything brief of picture-perfect backdrops.
+                                    <br>
+                                    Adding to the grandeur of the ceremonies would be the local pagdi-walas, mehndi
+                                    artists, folk dancers, sarangi players
+                                    and more. A plus is that your guests can reach Jaipur in a breeze by air and train
+                                    and even by car.
+                                </p>
+                            </div>
+                            <div class="desti-img" data-aos="zoom-in-down" data-aos-duration="2000">
+                                <img src="./images/destination/jaipur.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- ----- destination-2 ----- -->
+                        <div class="desti-item flex">
+                            <i class="fas fa-heart"></i>
+                            <div class="desti-text" data-aos="fade-left" data-aos-duration="1000">
+                                <h3>UDAIPUR</h3>
+                                <span>The City of Lake</span>
+                                <p>Of all destinations in India that are known to be perfect for weddings, Udaipur
+                                    always comes out on top and for good
+                                    reason. Its clear blue skies, glorious palaces and breathtaking lakes make the most
+                                    splendid setting for a regal
+                                    ceremony.
+                                    <br>
+                                    <br>
+                                    Rest assured, your wedding pictures will turn out to be super colourful and vibrant!
+                                    An advantage is your guests will
+                                    have a lot to do once the festivities are over, from going on sightseeing tours to
+                                    indulging in exciting activities like
+                                    boating on Pichola Lake.
+                                </p>
+                            </div>
+                            <div class="desti-img" data-aos="zoom-in-down" data-aos-duration="2000">
+                                <img src="./images/destination/udaipur.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- ----- destination-3 ----- -->
+                        <div class="desti-item flex">
+                            <i class="fas fa-heart"></i>
+                            <div class="desti-text" data-aos="fade-right" data-aos-duration="1000">
+                                <h3>JIM CORBET</h3>
+                                <span class="date">29 Feb 2020</span>
+                                <p>If you have always dreamt of a destination wedding but at the same time you don’t
+                                    wish to splurge, then Jim Corbett is
+                                    just the perfect place for you. Fast emerging as a popular affordable destination
+                                    for weddings in India, this tree-laden
+                                    land will provide you and your partner the perfect opportunity to celebrate one of
+                                    the biggest days of your life away
+                                    from the hustle and bustle of the city.
+                                    <br>
+                                    Imagine taking pheras under a beautiful mandap surrounded by forested hills amidst
+                                    chilly mountain air!
+                                </p>
+                            </div>
+                            <div class="desti-img" data-aos="zoom-in-down" data-aos-duration="2000">
+                                <img src="./images/destination/jim corbet.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- ----- destination-4 ----- -->
+                        <div class="desti-item flex">
+                            <i class="fas fa-heart"></i>
+                            <div class="desti-text" data-aos="fade-left" data-aos-duration="1000">
+                                <h3>RISHIKESH</h3>
+                                <span class="date">29 Feb 2020</span>
+                                <p>Rishikesh is one of the most sacred cities in India and you might find it
+                                    sanctimonious to begin your marital journey
+                                    from here. It would indeed be fascinating to take the pheras on the shore of Ganga
+                                    River underneath the stunning sky.
+                                    <br>
+                                    The sound of the river flowing by coupled with the chanting of mantras and ringing
+                                    of bells will add an element of
+                                    spirituality to your wedding ceremony that will be unparalleled. There are many
+                                    perfect wedding venues in Rishikesh for
+                                    you to choose from.
+                                </p>
+                            </div>
+                            <div class="desti-img" data-aos="zoom-in-down" data-aos-duration="2000">
+                                <img src="./images/destination/rishikesh.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <!-- ----- destination-5 ----- -->
+                        <div class="desti-item flex">
+                            <i class="fas fa-heart"></i>
+                            <div class="desti-text" data-aos="fade-right" data-aos-duration="1000">
+                                <h3>GOA</h3>
+                                <span class="date">29 Feb 2020</span>
+                                <p>When talking about getting married by the sea, there’s no way you can’t think about
+                                    marrying your special someone in
+                                    Goa. It is such a mixed bag of pristine beaches, breathtaking sunsets, historical
+                                    churches, beautiful resorts and
+                                    verdant forests that you can have a variety of pictures for your wedding and
+                                    pre-wedding shoot.
+                                    <br>
+                                    You can also revel in Goa’s party vibe by organising the haldi and mehndi
+                                    festivities by the pool, rain dances in the
+                                    middle of the sea or an endless night of cocktails on the beach.
+                                </p>
+                            </div>
+                            <div class="desti-img" data-aos="zoom-in-down" data-aos-duration="2000">
+                                <img src="./images/destination/goa.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------x-------- Destination Section End --------x-------- -->
+
+        <!-- ----------------- Parallax Section Start ----------------- -->
+        <section class="parallax">
+            <div class="parallax-wrapper">
+                <span class="center" data-aos="zoom-in" data-aos-duration="1500">Every love story is beautiful, but
+                    yours should be unique.</span>
+            </div>
+        </section>
+        <!-- --------x-------- Parallax Section End --------x-------- -->
+
+        <!-- ----------------- Gallery Section Start ----------------- -->
+        <section class="gallery" id="gallery-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h1 data-aos="zoom-out-right" data-aos-duration="1000">Gallery</h1>
+                    <p data-aos="zoom-out-left" data-aos-duration="1000">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Veniam, ut.</p>
+                </div>
+                <div class="gallery-wrapper">
+                    <a href="images/Gallery/1.jpg" class="img-1" data-aos="flip-left" data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/2.jpg" class="img-2" data-aos="flip-left" data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/wedding decor.jpg" class="img-3" data-aos="flip-left"
+                        data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/decor-1.jpg" class="img-4" data-aos="flip-left" data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/decor-2.jpg" class="img-5" data-aos="flip-right" data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/6.jpg" class="img-6" data-aos="flip-right" data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/decor-3.jpg" class="img-7" data-aos="flip-left" data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/8.jpg" class="img-8" data-aos="flip-left" data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/birthday decor-1.jpg" class="img-9" data-aos="flip-right"
+                        data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/decor-4.jpg" class="img-10" data-aos="flip-right" data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/decor-5.jpg" class="img-11" data-aos="flip-right" data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/birthday decor-2.jpg" class="img-12" data-aos="flip-right"
+                        data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/decor-6.jpg" class="img-13" data-aos="flip-right" data-aos-duration="1500">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/wedding decor-2.jpg" class="img-14" data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/wedding decor-4.jpg.jpg" class="img-15" data-aos="flip-right"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/wedding decor-3.jpg" class="img-16" data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/wedding decor-5.jpg" class="img-17" data-aos="flip-right"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                    <a href="images/Gallery/wedding decor-6.jpg" class="img-18" data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                        <i class="fas fa-expand"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- --------x-------- Gallery Section End --------x-------- -->
+
+        <!-- ----------------- Testimonial Section Start ----------------- -->
+        <section class="testimonial center" id="testimonial-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h1 data-aos="fade-down" data-aos-duration="1000">Testimonials</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Veniam, ut.</p>
+                </div>
+                <div class="testi-wrapper center">
+                    <!-- ----- testimonial-1 ----- -->
+                    <div class="testi-content" data-aos="zoom-out-right" data-aos-duration="1500">
+                        <div class="content-top row">
+                            <div class="profile flex align-center">
+                                <div class="profile-img">
+                                    <img src="./images/user-img/avatar1.jpg" alt="">
+                                </div>
+                                <div class="user-name flex">
+                                    <strong>Harshit Singh</strong>
+                                    <span>@Harshit Singh</span>
+                                </div>
+                            </div>
+                            <div class="reviews">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="client-comment">
+                            <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit exercitationem
+                                aliquid
+                                velit pariatur animi, facilis fugiat veritatis autem, fuga, deleniti itaque? Dolor
+                                obcaecati itaque enim sit, mollitia amet praesentium earum.</blockquote>
+                        </div>
+                    </div>
+
+                    <!-- ----- testimonial-2 ----- -->
+                    <div class="testi-content" data-aos="zoom-out-left" data-aos-duration="1500">
+                        <div class="content-top row">
+                            <div class="profile flex align-center">
+                                <div class="profile-img">
+                                    <img src="./images/user-img/avatar1.jpg" alt="">
+                                </div>
+                                <div class="user-name flex">
+                                    <strong>Harshit Singh</strong>
+                                    <span>@Harshit Singh</span>
+                                </div>
+                            </div>
+                            <div class="reviews">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="client-comment">
+                            <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit exercitationem
+                                aliquid
+                                velit pariatur animi, facilis fugiat veritatis autem, fuga, deleniti itaque? Dolor
+                                obcaecati itaque enim sit, mollitia amet praesentium earum.</blockquote>
+                        </div>
+                    </div>
+
+                    <!-- ----- testimonial-3 ----- -->
+                    <div class="testi-content" data-aos="zoom-out-right" data-aos-duration="1500">
+                        <div class="content-top row">
+                            <div class="profile flex align-center">
+                                <div class="profile-img">
+                                    <img src="./images/user-img/avatar1.jpg" alt="">
+                                </div>
+                                <div class="user-name flex">
+                                    <strong>Harshit Singh</strong>
+                                    <span>@Harshit Singh</span>
+                                </div>
+                            </div>
+                            <div class="reviews">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="client-comment">
+                            <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit exercitationem
+                                aliquid
+                                velit pariatur animi, facilis fugiat veritatis autem, fuga, deleniti itaque? Dolor
+                                obcaecati itaque enim sit, mollitia amet praesentium earum.</blockquote>
+                        </div>
+                    </div>
+
+                    <!-- ----- testimonial-4 ----- -->
+                    <div class="testi-content" data-aos="zoom-out-left" data-aos-duration="1500">
+                        <div class="content-top row">
+                            <div class="profile flex align-center">
+                                <div class="profile-img">
+                                    <img src="./images/user-img/avatar1.jpg" alt="">
+                                </div>
+                                <div class="user-name flex">
+                                    <strong>Harshit Singh</strong>
+                                    <span>@Harshit Singh</span>
+                                </div>
+                            </div>
+                            <div class="reviews">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="client-comment">
+                            <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit exercitationem
+                                aliquid
+                                velit pariatur animi, facilis fugiat veritatis autem, fuga, deleniti itaque? Dolor
+                                obcaecati itaque enim sit, mollitia amet praesentium earum.</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------x-------- Testimonial Section End --------x-------- -->
+
+        <!-- ----------------- Our-team Section Start ----------------- -->
+        <section class="our-team" id="our-team-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h1 data-aos="zoom-in" data-aos-duration="1000">Our team</h1>
+                    <p data-aos="zoom-in" data-aos-duration="1000">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Tenetur, architecto.</p>
+                </div>
+                <div class="team-wrapper center">
+                    <!-- ----- team-card-1 ----- -->
+                    <div class="team-card" data-aos="flip-left" data-aos-duration="1500">
+                        <div class="team-info center">
+                            <div class="img-bx">
+                                <img src="./images/Team/p1.jpeg" alt="">
+                            </div>
+                            <div class="info-bx">
+                                <h4>Member's name</h4>
+                                <h6>Designation</h6>
+                            </div>
+                            <div class="social-bx">
+                                <a href="" class="i fab fa-facebook-f"></a>
+                                <a href="" class="i fab fa-instagram"></a>
+                                <a href="" class="i fab fa-twitter"></a>
+                                <a href="" class="i fab fa-linkedin-in"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----- team-card-2 ----- -->
+                    <div class="team-card" data-aos="flip-left" data-aos-duration="1500">
+                        <div class="team-info center">
+                            <div class="img-bx">
+                                <img src="./images/Team/p2.jpeg" alt="">
+                            </div>
+                            <div class="info-bx">
+                                <h4>Member's name</h4>
+                                <h6>Designation</h6>
+                            </div>
+                            <div class="social-bx">
+                                <a href="" class="i fab fa-facebook-f"></a>
+                                <a href="" class="i fab fa-instagram"></a>
+                                <a href="" class="i fab fa-twitter"></a>
+                                <a href="" class="i fab fa-linkedin-in"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----- team-card-3 ----- -->
+                    <div class="team-card" data-aos="flip-left" data-aos-duration="1500">
+                        <div class="team-info center">
+                            <div class="img-bx">
+                                <img src="./images/Team/p3.jpeg" alt="">
+                            </div>
+                            <div class="info-bx">
+                                <h4>Member's name</h4>
+                                <h6>Designation</h6>
+                            </div>
+                            <div class="social-bx">
+                                <a href="" class="i fab fa-facebook-f"></a>
+                                <a href="" class="i fab fa-instagram"></a>
+                                <a href="" class="i fab fa-twitter"></a>
+                                <a href="" class="i fab fa-linkedin-in"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----- team-card-4 ----- -->
+                    <div class="team-card" data-aos="flip-right" data-aos-duration="1500">
+                        <div class="team-info center">
+                            <div class="img-bx">
+                                <img src="./images/Team/p4.jpeg" alt="">
+                            </div>
+                            <div class="info-bx">
+                                <h4>Member's name</h4>
+                                <h6>Designation</h6>
+                            </div>
+                            <div class="social-bx">
+                                <a href="" class="i fab fa-facebook-f"></a>
+                                <a href="" class="i fab fa-instagram"></a>
+                                <a href="" class="i fab fa-twitter"></a>
+                                <a href="" class="i fab fa-linkedin-in"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----- team-card-5 ----- -->
+                    <div class="team-card" data-aos="flip-right" data-aos-duration="1500">
+                        <div class="team-info center">
+                            <div class="img-bx">
+                                <img src="./images/Team/p1.jpeg" alt="">
+                            </div>
+                            <div class="info-bx">
+                                <h4>Member's name</h4>
+                                <h6>Designation</h6>
+                            </div>
+                            <div class="social-bx">
+                                <a href="" class="i fab fa-facebook-f"></a>
+                                <a href="" class="i fab fa-instagram"></a>
+                                <a href="" class="i fab fa-twitter"></a>
+                                <a href="" class="i fab fa-linkedin-in"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----- team-card-6 ----- -->
+                    <div class="team-card" data-aos="flip-right" data-aos-duration="1500">
+                        <div class="team-info center">
+                            <div class="img-bx">
+                                <img src="./images/Team/p2.jpeg" alt="">
+                            </div>
+                            <div class="info-bx">
+                                <h4>Member's name</h4>
+                                <h6>Designation</h6>
+                            </div>
+                            <div class="social-bx">
+                                <a href="" class="i fab fa-facebook-f"></a>
+                                <a href="" class="i fab fa-instagram"></a>
+                                <a href="" class="i fab fa-twitter"></a>
+                                <a href="" class="i fab fa-linkedin-in"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------x-------- Our-team Section End --------x-------- -->
+
+        <!-- ----------------- Contact-us Section Start ----------------- -->
+        <section class="contact-us" id="contact-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h1 data-aos="fade-down data-aos-duration=" 1000">Contact Us</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Soluta, repellendus!</p>
+                </div>
+                <div class="center">
+                    <div class="contact-form" data-aos="zoom-in" data-aos-duration="1000">
+                        <form class="form" method="POST" action="/" id="form">
+                            <div class="form-row flex">
+                                <div class="input-data" data-aos="fade-right" data-aos-duration="2000">
+                                    <input type="text" id="firstname" name="firstname" required autocomplete="off">
+                                    <div class="underline"></div>
+                                    <label>First Name</label>
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small>Errormsg</small>
+                                </div>
+                                <div class="input-data" data-aos="fade-left" data-aos-duration="2000">
+                                    <input type="text" id="lastname" name="lastname" required autocomplete="off">
+                                    <div class="underline"></div>
+                                    <label>Last Name</label>
+                                </div>
+                            </div>
+                            <div class="form-row flex">
+                                <div class="input-data" data-aos="fade-right" data-aos-duration="2500">
+                                    <input type="email" id="email" name="email" required autocomplete="off">
+                                    <div class="underline"></div>
+                                    <label>Email Address:-</label>
+                                </div>
+                                <div class="input-data" data-aos="fade-left" data-aos-duration="2500">
+                                    <input type="number" id="phone" name="phone" required autocomplete="off">
+                                    <div class="underline"></div>
+                                    <label>Phone No:-</label>
+                                </div>
+                            </div>
+                            <div class="form-row flex">
+                                <div class="input-data  textarea" data-aos="fade-right" data-aos-duration="3000">
+                                    <textarea cols="30" rows="10" id="message" name="message" required></textarea>
+                                    <div class="underline"></div>
+                                    <label>Write your message here...</label>
+                                </div>
+                            </div>
+                            <div class="form-row submit-btn flex">
+                                <div class="input-data" data-aos="zoom-in" data-aos-duration="3000">
+                                    <div class="inner">
+                                        <input type="submit" value="submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------x-------- Contact-us Section End --------x-------- -->
+
+    </main>
+    <!-- ------------x------------ Main Section End ------------x------------ -->
+
+    <!-- ------------------------- Footer Section Start ------------------------- -->
+    <footer>
+        <div class="footer-wrapper flex">
+            <div class="footer-about box" data-aos="fade-right" data-aos-duration="1000">
+                <h2>About Us</h2>
+                <div class="footer-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis cum quod nulla quaerat
+                        nobis, doloremque pariatur illo. Eaque, dolore quae!</p>
+                    <div class="f-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contact box" data-aos="zoom-in" data-aos-duration="1000">
+                <h2>Address</h2>
+                <div class="footer-content">
+                    <div class="place flex align-center">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <a href="https://goo.gl/maps/sEzDG5xq8x27uokaA" target="_blank">Noida, Delhi-NCR</a>
+                    </div>
+                    <div class="phone flex align-center">
+                        <span class="fas fa-phone-alt"></span>
+                        <a href="tel:9899892547">9899892547,&nbsp;</a>
+                        <a href="tel:7018785245">&nbsp;7018785245</a>
+                    </div>
+                    <div class="email flex align-center">
+                        <span class="fas fa-envelope"></span>
+                        <a href="mailto:maashaevents@gmail.com" target="_blank">maashaevents@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-media box" data-aos="zoom-in" data-aos-duration="1000">
+                <h2>Instagram</h2>
+                <div class="footer-content">
+                    <div class="flew-row">
+                        <img src="./images/Gallery/1.jpg" alt="insta1">
+                        <img src="./images/Gallery/2.jpg" alt="insta2">
+                        <img src="./images/Gallery/3.jpg" alt="insta3">
+                    </div>
+                    <div class="flew-row">
+                        <img src="./images/Gallery/4.jpg" alt="insta4">
+                        <img src="./images/Gallery/5.jpg" alt="insta5">
+                        <img src="./images/Gallery/6.jpg" alt="insta6">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-newsletter box" data-aos="fade-left" data-aos-duration="1000">
+                <h2>Newsletter</h2>
+                <div class="footer-content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="f-text">Email *</div>
+                            <input type="email" name="email" placeholder="Email@gmail.com" required>
+                        </div>
+                        <div class="msg">
+                            <div class="f-text">Message *</div>
+                            <textarea name="message" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <div class="f-btn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>
+                <span class="far fa-copyright"></span><span>2021 All Rights Reserverd |</span>
+                <span class="credit">Created by <a href="#">Harshit Singh</a></span>
+            </div>
+        </div>
+    </footer>
+    <!-- ------------x------------ Footer Section End ------------x------------ -->
+
+    <!-- Glidejs Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+
+    <!-- Animation Js File -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS File -->
+    <script src="./JS/main.js"></script>
+    <script src="./JS/slider.js"></script>
+    <script src="./JS/setting.js"></script>
+</body>
+
+</html>
