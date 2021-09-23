@@ -38,27 +38,7 @@ window.addEventListener("scroll", () => {
             }
         });
     });
-
-    // Scroll bottom to top
-    const scrollTop = document.querySelector(".scroll-top");
-    scrollTop.classList.toggle('active', window.scrollY > 200);
 });
-
-// Creating a scroll to top function
-const scrollToTop = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-
-// Preloader 
-window.onload = () => {
-    setTimeout(() => {
-        let loader = document.getElementsByClassName("loader-wrapper")[0];
-        loader.style.display = "none";
-    }, 5000);
-}
 /* ------------x------------ header ------------x------------ */
 
 AOS.init();

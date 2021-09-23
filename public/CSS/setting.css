@@ -45,6 +45,13 @@
 
 .loader-wrapper .loader {
   position: relative;
+  width: 200px;
+  height: 200px;
+}
+.loader-wrapper img {
+  width: 100%;
+  height: 180px;
+  line-height: 180px;
 }
 
 .loader-wrapper h2 {
@@ -54,6 +61,31 @@
 }
 
 .loader-wrapper .loader .dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(18deg * var(--i)));
+}
+
+.loader-wrapper .loader .dot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--main-color);
+  box-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color),
+    0 0 40px var(--main-color), 0 0 60px var(--main-color),
+    0 0 80px var(--main-color), 0 0 100px var(--main-color);
+  animation: animateDot 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+/* .loader-wrapper .loader .dot {
   position: relative;
   display: block;
   width: 20px;
@@ -65,9 +97,9 @@
   margin: 2rem 1rem;
   transform: scale(0.1);
   border-radius: 50%;
-  animation: animateDot 2s linear infinite;
-  animation-delay: calc(0.1s * var(--i));
+ 
 }
+*/
 
 .loader-wrapper .loader:last-child .dot {
   animation-delay: calc(-0.1s * var(--i));
@@ -75,14 +107,11 @@
 
 @keyframes animateDot {
   0% {
-    transform: scale(0.1);
-  }
-  10% {
     transform: scale(1);
   }
-  50%,
+  80%,
   100% {
-    transform: scale(0.1);
+    transform: scale(0);
   }
 }
 
@@ -104,7 +133,7 @@
   max-width: 200px;
   width: 100%;
   padding: 1.5rem;
-  top: 100px;
+  top: 150px;
   z-index: 1500;
   box-shadow: 0 0 6px #cccccc;
   transition: all 0.3s ease;
@@ -206,9 +235,7 @@ body.dark .section-heading h1::after {
 }
 
 body.dark .header.fixed nav,
-body.dark .services .service-wrapper .service-card,
 body.dark .testimonial .testi-content,
-body.dark .team-wrapper .team-card,
 body.dark .contact-us .contact-form,
 body.dark .form .input-data input,
 body.dark .form .textarea textarea {
@@ -240,7 +267,6 @@ body.dark .about .about-title h2,
 body.dark .about .about-item p,
 body.dark .desti-text span,
 body.dark .desti-text p,
-body.dark .services .service-wrapper .service-card h2,
 body.dark .form .input-data label,
 body.dark .form .textarea textarea,
 body.dark .form .input-data input,
@@ -248,16 +274,13 @@ body.dark .section-heading p {
   color: var(--white);
 }
 
-body.dark .services .service-wrapper .service-card p,
-body.dark .client-comment blockquote,
-body.dark .team-wrapper .team-info .info-bx h4 {
+body.dark .client-comment blockquote {
   color: #bbbbbb;
 }
 
 body.dark .header .nav-items .nav-links:hover,
 body.dark .header .nav-list.active .nav-links,
 body.dark .header.fixed .nav-items .nav-links:hover,
-body.dark .services .service-wrapper .service-card:hover h2,
 body.dark .form .input-data input:focus ~ label,
 body.dark .form .textarea textarea:focus ~ label,
 body.dark .form .input-data input:valid ~ label,
@@ -266,7 +289,6 @@ body.dark .form .textarea textarea:valid ~ label {
 }
 
 body.dark .header.fixed .navbar-toggler,
-body.dark .services .service-wrapper .service-content,
 body.dark .form .input-data input,
 body.dark .form .textarea textarea {
   border-color: var(--white);
@@ -274,8 +296,7 @@ body.dark .form .textarea textarea {
 
 body.dark .about .section-heading h1::after,
 body.dark .destinations .section-heading h1::after,
-body.dark .gallery .section-heading h1::after,
-body.dark .our-team .section-heading h1::after {
+body.dark .gallery .section-heading h1::after {
   background: var(--main-color);
 }
 
@@ -283,12 +304,12 @@ body.dark .testimonial .testi-content {
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
 }
 
-body.dark .team-wrapper .team-card {
-  box-shadow: 1px 1px 10px var(--white), -6px -6px 10px var(--black);
+body.dark .header.fixed .nav-brand .black-logo {
+  display: none;
 }
 
-body.dark .team-wrapper .team-card:hover {
-  box-shadow: 1px 1px 10px var(--main-color), -6px -6px 10px var(--main-color);
+body.dark .header.fixed .nav-brand .white-logo {
+  display: block;
 }
 
 @media only screen and (max-width: 850px) {

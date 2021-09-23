@@ -51,3 +51,23 @@ window.addEventListener("load", () => {
     }
 });
 
+/* --------------- Creating a scroll to top function --------------- */
+window.addEventListener("scroll", () => {
+    const scrollTop = document.querySelector(".scroll-top");
+    scrollTop.classList.toggle('active', window.scrollY > 200);
+});
+
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+/* --------------- Creating a Preloader --------------- */
+window.onload = () => {
+    setTimeout(() => {
+        let loader = document.getElementsByClassName("loader-wrapper")[0];
+        loader.style.display = "none";
+    }, 5000);
+}
